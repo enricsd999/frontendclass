@@ -2,22 +2,26 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const app = "Front-End Web Development";
   return (
     <nav className="border-b border-gray-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-4">
           <h1 className="text-lg font-bold text-blue-600 sm:text-xl md:text-2xl">
-            Front End Web Development
+            {app}
           </h1>
 
           {/* Desktop menu */}
           <div className="hidden items-center gap-6 md:flex">
             <a
               href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                console.log("Home");
+              }}
               className="text-gray-600 transition hover:text-blue-600"
             >
-              Home 
+              Home
             </a>
 
             <a
