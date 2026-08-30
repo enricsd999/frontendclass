@@ -9,6 +9,8 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Hero />
+      <Features />
+      <Footer />
     </div>
   );
 }
